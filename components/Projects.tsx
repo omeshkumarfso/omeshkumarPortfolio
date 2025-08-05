@@ -102,7 +102,7 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+    <section id="projects" className="py-20 bg-linear-to-b from-slate-800 to-slate-900">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -116,12 +116,12 @@ export default function Projects() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full text-emerald-300 text-sm font-medium border border-emerald-500/30 mb-6"
+            className="inline-block px-4 py-2 bg-linear-to-r from-emerald-500/20 to-teal-500/20 rounded-full text-emerald-300 text-sm font-medium border border-emerald-500/30 mb-6"
           >
             Portfolio Showcase
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
@@ -144,24 +144,24 @@ export default function Projects() {
               <div className="lg:w-1/2">
                 <div className="relative group">
                   <div
-                    className={`absolute inset-0 bg-gradient-to-r ${project.color}/20 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300 blur-xl`}
+                    className={`absolute inset-0 bg-linear-to-r ${project.color}/20 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300 blur-xl`}
                   ></div>
-                  <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-700/80 rounded-3xl overflow-hidden border border-slate-600/50 hover:border-emerald-500/50 transition-all duration-300">
+                  <div className="relative bg-linear-to-br from-slate-800/80 to-slate-700/80 rounded-3xl overflow-hidden border border-slate-600/50 hover:border-emerald-500/50 transition-all duration-300">
                     <img
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
                       className="w-full h-80 object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <Button
-                        className={`bg-gradient-to-r ${project.color} hover:scale-110 text-white shadow-lg transform transition-all duration-300`}
+                        className={`bg-linear-to-r ${project.color} hover:scale-110 text-white shadow-lg transform transition-all duration-300`}
                       >
                         <Play className="mr-2 h-5 w-5" />
                         View Demo
                       </Button>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <div className={`p-2 bg-gradient-to-r ${project.color} rounded-full`}>
+                      <div className={`p-2 bg-linear-to-r ${project.color} rounded-full`}>
                         <Star className="h-5 w-5 text-white" />
                       </div>
                     </div>
@@ -183,10 +183,10 @@ export default function Projects() {
                       <motion.div
                         key={metricIndex}
                         whileHover={{ scale: 1.05 }}
-                        className="text-center p-4 bg-gradient-to-br from-slate-800/60 to-slate-700/60 rounded-2xl border border-emerald-500/20 backdrop-blur-sm"
+                        className="text-center p-4 bg-linear-to-br from-slate-800/60 to-slate-700/60 rounded-2xl border border-emerald-500/20 backdrop-blur-sm"
                       >
                         <div
-                          className={`text-2xl font-bold bg-gradient-to-r ${project.color} bg-clip-text text-transparent`}
+                          className={`text-2xl font-bold bg-linear-to-r ${project.color} bg-clip-text text-transparent`}
                         >
                           {value}
                         </div>
@@ -205,7 +205,7 @@ export default function Projects() {
                       {project.technologies.map((tech, techIndex) => (
                         <Badge
                           key={techIndex}
-                          className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border-emerald-500/30 hover:border-emerald-400/50 transition-colors"
+                          className="bg-linear-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border-emerald-500/30 hover:border-emerald-400/50 transition-colors"
                         >
                           {tech}
                         </Badge>
@@ -248,7 +248,7 @@ export default function Projects() {
                   {/* Action Buttons */}
                   <div className="flex gap-4">
                     <Button
-                      className={`bg-gradient-to-r ${project.color} hover:scale-105 text-white shadow-lg transform transition-all duration-300`}
+                      className={`bg-linear-to-r ${project.color} hover:scale-105 text-white shadow-lg transform transition-all duration-300`}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo

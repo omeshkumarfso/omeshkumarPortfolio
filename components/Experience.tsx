@@ -67,7 +67,7 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+    <section id="experience" className="py-20 bg-linear-to-b from-slate-900 to-slate-800">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -81,12 +81,12 @@ export default function Experience() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full text-emerald-300 text-sm font-medium border border-emerald-500/30 mb-6"
+            className="inline-block px-4 py-2 bg-linear-to-r from-emerald-500/20 to-teal-500/20 rounded-full text-emerald-300 text-sm font-medium border border-emerald-500/30 mb-6"
           >
             Career Journey
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Professional Experience
             </span>
           </h2>
@@ -97,7 +97,7 @@ export default function Experience() {
 
         <div className="relative max-w-6xl mx-auto">
           {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-emerald-500 via-teal-500 to-orange-500 rounded-full"></div>
+          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-linear-to-b from-emerald-500 via-teal-500 to-orange-500 rounded-full"></div>
 
           {experiences.map((exp, index) => (
             <motion.div
@@ -110,20 +110,20 @@ export default function Experience() {
             >
               {/* Timeline dot */}
               <div
-                className={`absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 bg-gradient-to-r ${exp.color} rounded-full border-4 border-slate-900 z-10 flex items-center justify-center`}
+                className={`absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 bg-linear-to-r ${exp.color} rounded-full border-4 border-slate-900 z-10 flex items-center justify-center`}
               >
                 <Building className="h-6 w-6 text-white" />
               </div>
 
               <div className="ml-20 md:ml-0 group relative">
                 <div
-                  className={`absolute inset-0 bg-gradient-to-r ${exp.color.replace("from-", "from-").replace("to-", "to-")}/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-linear-to-r ${exp.color.replace("from-", "from-").replace("to-", "to-")}/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 ></div>
-                <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-700/80 p-8 rounded-3xl backdrop-blur-sm border border-slate-600/50 hover:border-emerald-500/50 transition-all duration-300">
+                <div className="relative bg-linear-to-br from-slate-800/80 to-slate-700/80 p-8 rounded-3xl backdrop-blur-sm border border-slate-600/50 hover:border-emerald-500/50 transition-all duration-300">
                   <div className="flex flex-wrap items-center gap-4 mb-6">
                     <h3 className="text-2xl font-bold text-white">{exp.position}</h3>
                     <div
-                      className={`flex items-center px-3 py-1 bg-gradient-to-r ${exp.color}/20 rounded-full border border-emerald-500/30`}
+                      className={`flex items-center px-3 py-1 bg-linear-to-r ${exp.color}/20 rounded-full border border-emerald-500/30`}
                     >
                       <Calendar className="h-4 w-4 mr-2 text-emerald-400" />
                       <span className="text-emerald-300 text-sm font-medium">{exp.duration}</span>
@@ -144,7 +144,7 @@ export default function Experience() {
                     <ul className="space-y-3">
                       {exp.achievements.map((achievement, achIndex) => (
                         <li key={achIndex} className="text-slate-300 flex items-start">
-                          <Award className="h-4 w-4 text-emerald-400 mr-3 mt-1 flex-shrink-0" />
+                          <Award className="h-4 w-4 text-emerald-400 mr-3 mt-1 shrink-0" />
                           {achievement}
                         </li>
                       ))}
@@ -160,7 +160,7 @@ export default function Experience() {
                       {exp.projects.map((project, projIndex) => (
                         <span
                           key={projIndex}
-                          className="px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 rounded-full text-sm font-medium border border-emerald-500/30"
+                          className="px-4 py-2 bg-linear-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 rounded-full text-sm font-medium border border-emerald-500/30"
                         >
                           {project}
                         </span>
