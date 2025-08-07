@@ -3,11 +3,14 @@
 import { motion } from "framer-motion"
 import { ChevronDown, Github, Linkedin, Mail, Phone, Download, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { totalExperinceCalculate } from "@/lib/utils"
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
+
+ 
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900">
@@ -57,7 +60,7 @@ export default function Hero() {
               <div className="absolute inset-2 bg-gradient-to-r from-slate-800 to-slate-700 rounded-full"></div>
               <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-emerald-400 shadow-2xl shadow-emerald-500/25">
                 <img
-                  src="/professional-developer-headshot.png"
+                  src="/profilePhoto/d.jpeg"
                   alt="Omesh Kumar"
                   className="w-full h-full object-cover"
                 />
@@ -102,7 +105,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Crafting innovative digital solutions with 4.5+ years of expertise in React.js, Node.js, and AI integration.
+            Crafting innovative digital solutions with {totalExperinceCalculate("full")} of expertise in React.js, Node.js, and AI integration.
             Passionate about building scalable platforms that drive business growth and enhance user experiences.
           </motion.p>
 
@@ -128,6 +131,12 @@ export default function Hero() {
             <Button
               variant="outline"
               className="border-2 border-orange-500/50 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 bg-transparent"
+              onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/resume/OmeshKumarResume.pdf';
+              link.download = '/resume/OmeshKumarResume.pdf';
+              link.click();
+              }}
             >
               <Download className="mr-2 h-5 w-5" />
               Resume
@@ -159,7 +168,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
-              href="#"
+              href="https://www.linkedin.com/in/omeshkumar/"
               className="p-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full text-cyan-400 hover:text-white border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300"
             >
               <Linkedin className="h-6 w-6" />
@@ -167,7 +176,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.2, rotate: -5 }}
               whileTap={{ scale: 0.9 }}
-              href="#"
+              href="https://github.com/omeshkumarfso"
               className="p-4 bg-gradient-to-r from-orange-500/20 to-amber-500/20 rounded-full text-orange-400 hover:text-white border border-orange-500/30 hover:border-orange-400 transition-all duration-300"
             >
               <Github className="h-6 w-6" />
