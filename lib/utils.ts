@@ -24,6 +24,6 @@ export const totalExperinceCalculate = (type: 'full' | 'short') => {
     const months = totalMonths % 12;
     return `${years} ${years === 1 ? 'year' : 'years'}${months > 0 ? ` and ${months} ${months === 1 ? 'month' : 'months'}` : ''}`;
   } else {
-    return `${(totalMonths / 12).toFixed(1)} years`;
+    return `${(totalMonths / 12).toFixed(1)}`;
   }
 }
