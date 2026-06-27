@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronDown, Github, Linkedin, Mail, Phone, Download, Sparkles } from "lucide-react"
-import { totalExperinceCalculate } from "@/lib/utils"
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -109,7 +108,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-slate-300 mb-6 font-medium"
           >
-            Fullstack Developer & AI Integration Specialist
+            Founder of Kodikas · Fullstack Developer & AI Integration Specialist
           </motion.p>
 
           <motion.p
@@ -118,7 +117,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Crafting innovative digital solutions with {totalExperinceCalculate("full")} of expertise in React.js, Node.js, and AI integration.
+            Crafting innovative digital solutions with 5+ years of expertise in React.js, Node.js, and AI integration.
             Passionate about building scalable platforms that drive business growth and enhance user experiences.
           </motion.p>
 

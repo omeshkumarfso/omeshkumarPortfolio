@@ -1,11 +1,58 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Play, TrendingUp, Shield, Zap, Star } from "lucide-react"
+import { ExternalLink, Play, TrendingUp, Shield, Zap, Star } from "lucide-react"
 
 
 export default function Projects() {
   const projects = [
+    {
+      title: "Kodikas Partner — three-portal e-commerce SaaS",
+      description:
+        "A multi-tenant e-commerce platform built solo end to end: a customer storefront, a merchant portal with sales analytics, and a super-admin console with oversight of all stores.",
+      image: "/ecommerce-multi-portal-dashboard.png",
+      video: "/ecommerce-order-management-demo.png",
+      technologies: ["React", "TypeScript", "Node.js", "Multi-tenant", "Analytics"],
+      achievements: [
+        "Architected and built three connected portals single-handedly",
+        "Customer storefront with full shopping and checkout flow",
+        "Merchant portal with real-time sales analytics",
+        "Super-admin console with oversight across all stores",
+      ],
+      metrics: {
+        portals: "3",
+        tenancy: "Multi",
+        built: "Solo",
+      },
+      features: ["Customer Storefront", "Merchant Analytics", "Super-Admin Console", "Multi-tenant Architecture"],
+      color: "from-emerald-500 to-teal-500",
+      liveLinks: [
+        { label: "Storefront", url: "https://shop.kodikas.in" },
+        { label: "Partner Portal", url: "https://partner.kodikas.in" },
+      ],
+    },
+    {
+      title: "New Sarkari Result — Government Jobs Platform",
+      description:
+        "A live platform delivering government job notifications, results, and admit cards to job seekers across India, built for SEO and high-traffic content delivery.",
+      image: "/placeholder.svg",
+      video: "/placeholder.svg",
+      technologies: ["Next.js", "Node.js", "SEO", "SSR", "Content Delivery"],
+      achievements: [
+        "Launched a public government-jobs platform for Indian job seekers",
+        "Delivers job notifications, results, and admit cards",
+        "Engineered for SEO and high-traffic content delivery",
+        "Server-rendered with Next.js for fast, indexable pages",
+      ],
+      metrics: {
+        focus: "SEO",
+        traffic: "High",
+        region: "India",
+      },
+      features: ["Job Notifications", "Results & Admit Cards", "SEO Optimized", "High-Traffic Delivery"],
+      color: "from-teal-500 to-cyan-500",
+      liveLinks: [{ label: "Live Demo", url: "https://newsarkariresult.org" }],
+    },
     {
       title: "Logical Contracts Platform",
       description:
@@ -26,8 +73,7 @@ export default function Projects() {
       },
       features: ["AI-Powered Drafting", "Real-time Collaboration", "WebSockets", "Large Document Support"],
       color: "from-emerald-500 to-teal-500",
-      demoUrl: "#",
-      githubUrl: "#",
+      liveLinks: [] as { label: string; url: string }[],
     },
     {
       title: "SwilMart Multi-Portal System",
@@ -49,8 +95,7 @@ export default function Projects() {
       },
       features: ["Multi-tenant Support", "Real-time Tracking", "Inventory Management", "Payment Gateway"],
       color: "from-teal-500 to-cyan-500",
-      demoUrl: "#",
-      githubUrl: "#",
+      liveLinks: [] as { label: string; url: string }[],
     },
     {
       title: "Quickbit Crypto Platform",
@@ -72,8 +117,7 @@ export default function Projects() {
       },
       features: ["Crypto Payments", "Merchant Tools", "Security Compliance", "Transaction Tracking"],
       color: "from-cyan-500 to-blue-500",
-      demoUrl: "#",
-      githubUrl: "#",
+      liveLinks: [] as { label: string; url: string }[],
     },
     {
       title: "Swil ERP Admin System",
@@ -95,8 +139,7 @@ export default function Projects() {
       },
       features: ["Role Management", "Permission Control", "Advanced Validations", "Performance Optimization"],
       color: "from-orange-500 to-amber-500",
-      demoUrl: "#",
-      githubUrl: "#",
+      liveLinks: [] as { label: string; url: string }[],
     },
   ]
 
@@ -245,20 +288,22 @@ export default function Projects() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-4">
-                    <button
-                      className={`flex items-center px-4 py-2 rounded-md font-medium bg-gradient-to-r ${project.color} hover:scale-105 text-white shadow-lg transform transition-all duration-300`}
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </button>
-                    <button
-                      className="flex items-center px-4 py-2 rounded-md font-medium border-2 border-emerald-500/50 text-emerald-400 hover:bg-emerald-500 hover:text-white bg-transparent transition-all duration-300"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      View Code
-                    </button>
-                  </div>
+                  {project.liveLinks.length > 0 && (
+                    <div className="flex gap-4 flex-wrap">
+                      {project.liveLinks.map((link, linkIndex) => (
+                        <a
+                          key={linkIndex}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`flex items-center px-4 py-2 rounded-md font-medium bg-gradient-to-r ${project.color} hover:scale-105 text-white shadow-lg transform transition-all duration-300`}
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
