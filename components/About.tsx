@@ -1,6 +1,5 @@
 "use client"
 
-import { totalExperinceCalculate } from "@/lib/utils"
 import { motion } from "framer-motion"
 import { Code, Database, Smartphone, Brain, Zap, Target } from "lucide-react"
 
@@ -37,9 +36,8 @@ export default function About() {
   ]
 
   const stats = [
-    { number: totalExperinceCalculate("short"), label: "Years Experience", icon: Target },
+    { number: "5+", label: "Years Experience", icon: Target },
     { number: "10+", label: "Projects Completed", icon: Zap },
-    { number: "100K+", label: "Users Impacted", icon: Code },
     { number: "7", label: "Team Members Led", icon: Database },
   ]
 
