@@ -4,9 +4,7 @@ import type React from "react"
 
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send, Linkedin, Github, MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+
 import { useState } from "react"
 
 export default function Contact() {
@@ -134,7 +132,8 @@ export default function Contact() {
                   <motion.a
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
-                    href="#"
+                    href="https://www.linkedin.com/in/iamomeshkumarr/"
+                    target="_blank"
                     className="p-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl text-white hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
                   >
                     <Linkedin className="h-6 w-6" />
@@ -142,7 +141,8 @@ export default function Contact() {
                   <motion.a
                     whileHover={{ scale: 1.1, rotate: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    href="#"
+                    href="https://github.com/omeshkumarfso"
+                    target="_blank"
                     className="p-4 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl text-white hover:shadow-lg hover:shadow-teal-500/25 transition-all duration-300"
                   >
                     <Github className="h-6 w-6" />
@@ -168,13 +168,13 @@ export default function Contact() {
                     <label htmlFor="name" className="block text-white font-semibold mb-3 text-lg">
                       Name
                     </label>
-                    <Input
+                    <input
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="bg-slate-800/50 border-2 border-emerald-500/30 text-white placeholder-slate-400 focus:border-emerald-400 rounded-xl h-12 text-lg"
+                      className="w-full px-4 bg-slate-800/50 border-2 border-emerald-500/30 text-white placeholder-slate-400 focus:border-emerald-400 focus:outline-none rounded-xl h-12 text-lg transition-colors"
                       placeholder="Your Name"
                       required
                     />
@@ -183,13 +183,13 @@ export default function Contact() {
                     <label htmlFor="email" className="block text-white font-semibold mb-3 text-lg">
                       Email
                     </label>
-                    <Input
+                    <input
                       type="email"
                       id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="bg-slate-800/50 border-2 border-emerald-500/30 text-white placeholder-slate-400 focus:border-emerald-400 rounded-xl h-12 text-lg"
+                      className="w-full px-4 bg-slate-800/50 border-2 border-emerald-500/30 text-white placeholder-slate-400 focus:border-emerald-400 focus:outline-none rounded-xl h-12 text-lg transition-colors"
                       placeholder="your.email@example.com"
                       required
                     />
@@ -200,13 +200,13 @@ export default function Contact() {
                   <label htmlFor="subject" className="block text-white font-semibold mb-3 text-lg">
                     Subject
                   </label>
-                  <Input
+                  <input
                     type="text"
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="bg-slate-800/50 border-2 border-emerald-500/30 text-white placeholder-slate-400 focus:border-emerald-400 rounded-xl h-12 text-lg"
+                    className="w-full px-4 bg-slate-800/50 border-2 border-emerald-500/30 text-white placeholder-slate-400 focus:border-emerald-400 focus:outline-none rounded-xl h-12 text-lg transition-colors"
                     placeholder="Project Discussion"
                     required
                   />
@@ -216,26 +216,26 @@ export default function Contact() {
                   <label htmlFor="message" className="block text-white font-semibold mb-3 text-lg">
                     Message
                   </label>
-                  <Textarea
+                  <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className="bg-slate-800/50 border-2 border-emerald-500/30 text-white placeholder-slate-400 focus:border-emerald-400 resize-none rounded-xl text-lg"
+                    className="w-full p-4 bg-slate-800/50 border-2 border-emerald-500/30 text-white placeholder-slate-400 focus:border-emerald-400 focus:outline-none resize-none rounded-xl text-lg transition-colors"
                     placeholder="Tell me about your project or just say hello!"
                     required
                   />
                 </div>
 
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <Button
+                  <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white py-4 text-lg font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300"
+                    className="flex justify-center items-center w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white py-4 text-lg font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300"
                   >
                     <Send className="mr-2 h-5 w-5" />
                     Send Message
-                  </Button>
+                  </button>
                 </motion.div>
               </form>
             </div>

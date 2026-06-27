@@ -15,10 +15,9 @@ export default function Skills() {
         { name: "TypeScript", level: 90 },
         { name: "React.js", level: 95 },
         { name: "Next.js", level: 90 },
-        { name: "React Native", level: 85 },
+        { name: "React-native", level: 85 },
         { name: "HTML5/CSS3", level: 95 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Material-UI", level: 85 },
+        { name: "Tailwind CSS & MUI", level: 90 },
       ],
     },
     {
@@ -29,10 +28,9 @@ export default function Skills() {
       skills: [
         { name: "Node.js", level: 90 },
         { name: "Express.js", level: 90 },
-        { name: "MongoDB", level: 85 },
+        { name: "MongoDB & Mongoose", level: 85 },
         { name: "RESTful APIs", level: 95 },
         { name: "JWT Authentication", level: 90 },
-        { name: "Microservices", level: 80 },
       ],
     },
     {
@@ -41,12 +39,12 @@ export default function Skills() {
       color: "from-cyan-500 to-blue-500",
       bgColor: "from-cyan-500/10 to-blue-500/10",
       skills: [
-        { name: "Git/GitHub", level: 95 },
-        { name: "Docker", level: 80 },
-        { name: "AWS/Azure", level: 75 },
-        { name: "CI/CD", level: 80 },
+        { name: "Git, GitHub, Gitlab", level: 95 },
+        { name: "Docker & CI/CD", level: 80 },
+        { name: "AWS & Azure", level: 75 },
+        { name: "S3, EC2, Blob Storage", level: 75 },
+        { name: "Swagger & Postman", level: 90 },
         { name: "JIRA", level: 85 },
-        { name: "Postman", level: 90 },
       ],
     },
     {
@@ -55,11 +53,10 @@ export default function Skills() {
       color: "from-orange-500 to-amber-500",
       bgColor: "from-orange-500/10 to-amber-500/10",
       skills: [
-        { name: "Redux", level: 90 },
+        { name: "Redux Toolkit", level: 90 },
         { name: "React Router", level: 95 },
-        { name: "CKEditor", level: 85 },
+        { name: "Tanstack Query", level: 90 },
         { name: "React Intl", level: 80 },
-        { name: "Framer Motion", level: 85 },
       ],
     },
   ]

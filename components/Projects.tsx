@@ -2,30 +2,29 @@
 
 import { motion } from "framer-motion"
 import { ExternalLink, Github, Play, TrendingUp, Shield, Zap, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+
 
 export default function Projects() {
   const projects = [
     {
       title: "Logical Contracts Platform",
       description:
-        "AI-powered legal contract platform with real-time collaboration supporting 20+ simultaneous editors. Integrated OpenAI ChatGPT for contract drafting assistance.",
+        "AI-powered legal contract platform allowing real-time collaboration and AI-assisted drafting of legal documents.",
       image: "/legal-contract-dashboard.png",
       video: "/contract-editing-interface-demo.png",
-      technologies: ["React.js", "TypeScript", "OpenAI API", "Real-time Collaboration", "Node.js"],
+      technologies: ["React.js", "TypeScript", "OpenAI API", "WebSockets", "Redux Toolkit"],
       achievements: [
-        "10K+ active users",
-        "45% faster page load times",
-        "80% test coverage",
-        "70% reduction in production bugs",
+        "Built real-time editor supporting 20+ simultaneous users",
+        "Optimized performance reducing page load time by 45%",
+        "Achieved 80% test coverage reducing production bugs",
+        "Implemented scalable editor capable of handling 100+ page contracts",
       ],
       metrics: {
-        users: "10K+",
+        users: "20+",
         performance: "45%",
         coverage: "80%",
       },
-      features: ["AI-Powered Drafting", "Real-time Collaboration", "Document Management", "Version Control"],
+      features: ["AI-Powered Drafting", "Real-time Collaboration", "WebSockets", "Large Document Support"],
       color: "from-emerald-500 to-teal-500",
       demoUrl: "#",
       githubUrl: "#",
@@ -33,15 +32,15 @@ export default function Projects() {
     {
       title: "SwilMart Multi-Portal System",
       description:
-        "Comprehensive e-commerce ecosystem with three interconnected portals (B2B, B2C, Admin) featuring multi-tenant architecture and real-time order tracking.",
+        "Multi-tenant e-commerce ecosystem including Admin, B2B, and B2C portals with order management, inventory tracking, and merchant onboarding.",
       image: "/ecommerce-multi-portal-dashboard.png",
       video: "/ecommerce-order-management-demo.png",
-      technologies: ["React.js", "Node.js", "MongoDB", "Microservices", "Real-time APIs"],
+      technologies: ["React.js", "Node.js", "MongoDB", "Microservices", "AWS"],
       achievements: [
-        "Multi-tenant architecture",
-        "50% faster system response",
-        "Real-time inventory management",
-        "Secure payment integration",
+        "Led cross-functional team of 7 developers",
+        "Architected multi-portal scalable system architecture",
+        "Improved system response time by 50%",
+        "Integrated POS and delivery systems via microservices",
       ],
       metrics: {
         performance: "50%",
@@ -56,15 +55,15 @@ export default function Projects() {
     {
       title: "Quickbit Crypto Platform",
       description:
-        "Secure cryptocurrency payment platform enabling merchant integration and bank-to-crypto transactions with compliance-focused security measures.",
+        "A secure cryptocurrency payment platform enabling merchants to accept crypto payments and perform bank-to-crypto transactions with compliance-based workflows.",
       image: "/cryptocurrency-payment-platform.png",
       video: "/crypto-payment-transaction-demo.png",
-      technologies: ["React.js", "TypeScript", "Crypto APIs", "Security Protocols", "Payment Processing"],
+      technologies: ["React.js", "TypeScript", "Django", "Crypto APIs", "JWT Auth"],
       achievements: [
-        "Secure payment workflows",
-        "Cryptocurrency compliance",
-        "Merchant integration",
-        "Bank-to-crypto transactions",
+        "Developed secure crypto payment platform for merchant integration",
+        "Implemented secure payment workflows adhering to crypto compliance standards",
+        "Built responsive and intuitive user interfaces",
+        "Integrated RESTful APIs for seamless communication",
       ],
       metrics: {
         security: "100%",
@@ -79,22 +78,22 @@ export default function Projects() {
     {
       title: "Swil ERP Admin System",
       description:
-        "Enterprise resource planning system with advanced role management handling 4,800+ permission variables and supporting 1000+ concurrent users.",
+        "Enterprise ERP admin platform managing permissions, workflows, and operational data for large-scale business users.",
       image: "/erp-admin-dashboard.png",
       video: "/erp-role-management-demo.png",
-      technologies: ["React.js", "Node.js", "Role Management", "Caching", "Performance Optimization"],
+      technologies: ["React.js", "Redux Toolkit", "RBAC", "Form Validation", "Caching Strategies"],
       achievements: [
-        "4,800+ permission variables",
-        "75% fewer form errors",
-        "40% improved efficiency",
-        "60% fewer database queries",
+        "Developed role & permission system managing 4,800+ variables",
+        "Reduced form submission errors by 75% using advanced validations",
+        "Improved admin workflow efficiency by 40%",
+        "Optimized performance using caching techniques",
       ],
       metrics: {
         permissions: "4.8K+",
-        users: "1K+",
         efficiency: "40%",
+        errors: "-75%",
       },
-      features: ["Role Management", "Permission Control", "User Analytics", "Performance Optimization"],
+      features: ["Role Management", "Permission Control", "Advanced Validations", "Performance Optimization"],
       color: "from-orange-500 to-amber-500",
       demoUrl: "#",
       githubUrl: "#",
@@ -153,12 +152,12 @@ export default function Projects() {
                       className="w-full h-80 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <Button
-                        className={`bg-gradient-to-r ${project.color} hover:scale-110 text-white shadow-lg transform transition-all duration-300`}
+                      <button
+                        className={`flex items-center px-4 py-2 rounded-md font-medium bg-gradient-to-r ${project.color} hover:scale-110 text-white shadow-lg transform transition-all duration-300`}
                       >
                         <Play className="mr-2 h-5 w-5" />
                         View Demo
-                      </Button>
+                      </button>
                     </div>
                     <div className="absolute top-4 right-4">
                       <div className={`p-2 bg-gradient-to-r ${project.color} rounded-full`}>
@@ -203,12 +202,12 @@ export default function Projects() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
-                        <Badge
+                        <span
                           key={techIndex}
-                          className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border-emerald-500/30 hover:border-emerald-400/50 transition-colors"
+                          className="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 border border-emerald-500/30 hover:border-emerald-400/50 transition-colors"
                         >
                           {tech}
-                        </Badge>
+                        </span>
                       ))}
                     </div>
                   </div>
@@ -247,19 +246,18 @@ export default function Projects() {
 
                   {/* Action Buttons */}
                   <div className="flex gap-4">
-                    <Button
-                      className={`bg-gradient-to-r ${project.color} hover:scale-105 text-white shadow-lg transform transition-all duration-300`}
+                    <button
+                      className={`flex items-center px-4 py-2 rounded-md font-medium bg-gradient-to-r ${project.color} hover:scale-105 text-white shadow-lg transform transition-all duration-300`}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="border-2 border-emerald-500/50 text-emerald-400 hover:bg-emerald-500 hover:text-white bg-transparent transition-all duration-300"
+                    </button>
+                    <button
+                      className="flex items-center px-4 py-2 rounded-md font-medium border-2 border-emerald-500/50 text-emerald-400 hover:bg-emerald-500 hover:text-white bg-transparent transition-all duration-300"
                     >
                       <Github className="mr-2 h-4 w-4" />
                       View Code
-                    </Button>
+                    </button>
                   </div>
                 </div>
               </div>
