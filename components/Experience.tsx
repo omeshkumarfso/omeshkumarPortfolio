@@ -6,6 +6,20 @@ import { Calendar, MapPin, Users, TrendingUp, Building, Award } from "lucide-rea
 export default function Experience() {
   const experiences = [
     {
+      company: "Kodikas",
+      position: "Founder & Full-Stack Developer",
+      duration: "2026 – Present",
+      location: "Remote · India",
+      color: "from-emerald-500 to-teal-500",
+      achievements: [
+        "Founded an independent software studio; designed, built, and deployed multiple production products end to end (frontend, backend, infra)",
+        "Architected and built a three-portal multi-tenant e-commerce platform solo: customer storefront, merchant portal with sales analytics, and a super-admin console with oversight of all stores",
+        "Built and launched the Kodikas studio site with in-browser tools (PDF, image, video, JSON), SEO-optimized with Next.js",
+        "Launched New Sarkari Result, a government-jobs platform for Indian job seekers",
+      ],
+      projects: ["Kodikas Partner", "Kodikas Studio", "New Sarkari Result"],
+    },
+    {
       company: "FiftyFiveTechnologies Pvt. Ltd.",
       position: "Software Developer",
       duration: "Nov 2023 – Sep 2025",
@@ -88,7 +102,7 @@ export default function Experience() {
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            4.5+ years of building innovative solutions and leading development teams
+            5+ years of building innovative solutions and leading development teams
           </p>
         </motion.div>
 
