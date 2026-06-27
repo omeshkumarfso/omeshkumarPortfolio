@@ -1,8 +1,8 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronDown, Github, Linkedin, Mail, Phone, Download, Sparkles } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { totalExperinceCalculate } from "@/lib/utils"
 
 export default function Hero() {
@@ -12,18 +12,31 @@ export default function Hero() {
 
  
 
+  const [sparkles, setSparkles] = useState<{ left: string; top: string; duration: number; delay: number }[]>([])
+
+  useEffect(() => {
+    setSparkles(
+      [...Array(30)].map(() => ({
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        duration: Math.random() * 4 + 3,
+        delay: Math.random() * 2,
+      }))
+    )
+  }, [])
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0">
-          {[...Array(30)].map((_, i) => (
+          {sparkles.map((pos, i) => (
             <motion.div
               key={i}
               className="absolute"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: pos.left,
+                top: pos.top,
               }}
               animate={{
                 scale: [1, 1.2, 1],
@@ -31,9 +44,9 @@ export default function Hero() {
                 rotate: [0, 180, 360],
               }}
               transition={{
-                duration: Math.random() * 4 + 3,
+                duration: pos.duration,
                 repeat: Number.POSITIVE_INFINITY,
-                delay: Math.random() * 2,
+                delay: pos.delay,
               }}
             >
               <Sparkles className="h-4 w-4 text-emerald-400/30" />
@@ -115,22 +128,21 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            <Button
+            <button
               onClick={() => scrollToSection("contact")}
-              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-emerald-500/25"
+              className="flex items-center px-8 py-3 rounded-full text-lg font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white transition-all duration-300 transform hover:scale-105 shadow-lg shadow-emerald-500/25"
             >
               <Mail className="mr-2 h-5 w-5" />
               Let's Connect
-            </Button>
-            <Button
+            </button>
+            <button
               onClick={() => scrollToSection("projects")}
-              className="bg-slate-800 hover:bg-slate-700 text-emerald-400 border-2 border-emerald-500/50 hover:border-emerald-400 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              className="flex items-center px-8 py-3 rounded-full text-lg font-semibold bg-slate-800 hover:bg-slate-700 text-emerald-400 border-2 border-emerald-500/50 hover:border-emerald-400 transition-all duration-300 transform hover:scale-105"
             >
               View Projects
-            </Button>
-            <Button
-              variant="outline"
-              className="border-2 border-orange-500/50 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 bg-transparent"
+            </button>
+            <button
+              className="flex items-center px-8 py-3 rounded-full text-lg font-semibold border-2 border-orange-500/50 text-orange-400 hover:bg-orange-500 hover:text-white transition-all duration-300 transform hover:scale-105 bg-transparent"
               onClick={() => {
               const link = document.createElement('a');
               link.href = '/resume/OmeshKumarResume.pdf';
@@ -140,7 +152,7 @@ export default function Hero() {
             >
               <Download className="mr-2 h-5 w-5" />
               Resume
-            </Button>
+            </button>
           </motion.div>
 
           <motion.div
@@ -168,7 +180,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
-              href="https://www.linkedin.com/in/omeshkumar/"
+              href="https://www.linkedin.com/in/iamomeshkumarr/"
               className="p-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full text-cyan-400 hover:text-white border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300"
             >
               <Linkedin className="h-6 w-6" />
