@@ -25,7 +25,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900">
+    <section className="min-h-screen flex flex-col relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 pt-28 pb-12">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0">
@@ -59,7 +59,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-full blur-xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 z-10">
+      <div className="container mx-auto px-4 z-10 my-auto">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}

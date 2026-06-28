@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
-
+import FloatingContact from "@/components/FloatingContact"
 const inter = Inter({ subsets: ["latin"] })
 
 export const viewport: Viewport = {
@@ -115,6 +115,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <FloatingContact />
       </body>
     </html>
   )
