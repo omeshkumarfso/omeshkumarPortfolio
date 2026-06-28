@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
+import FloatingContact from "@/components/FloatingContact"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -111,7 +112,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <FloatingContact />
+      </body>
     </html>
   )
 }
