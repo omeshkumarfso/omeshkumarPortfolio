@@ -10,7 +10,7 @@ export default function Projects() {
       title: "Kodikas Partner — three-portal e-commerce SaaS",
       description:
         "A multi-tenant e-commerce platform built solo end to end: a customer storefront, a merchant portal with sales analytics, and a super-admin console with oversight of all stores.",
-      image: "/ecommerce-multi-portal-dashboard.png",
+      image: "/partnerApps.png",
       video: "/ecommerce-order-management-demo.png",
       technologies: ["React", "TypeScript", "Node.js", "Multi-tenant", "Analytics"],
       achievements: [
@@ -35,7 +35,7 @@ export default function Projects() {
       title: "New Sarkari Result — Government Jobs Platform",
       description:
         "A live platform delivering government job notifications, results, and admit cards to job seekers across India, built for SEO and high-traffic content delivery.",
-      image: "/placeholder.svg",
+      image: "/newsarkariResult.png",
       video: "/placeholder.svg",
       technologies: ["Next.js", "Node.js", "SEO", "SSR", "Content Delivery"],
       achievements: [

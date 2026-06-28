@@ -42,7 +42,7 @@ export default function Navbar() {
 
   const scrollToSection = (sectionId: string) => {
     setIsMobileMenuOpen(false)
-    if (pathname !== "/" && pathname !== "/premium" && pathname !== "/3d") {
+    if (pathname !== "/" && pathname !== "/3d") {
       router.push(`/#${sectionId}`)
       return
     }
@@ -120,12 +120,11 @@ export default function Navbar() {
             <div className="flex items-center space-x-4 relative z-50">
               <div className="relative hidden sm:block">
                 <select
-                  value={pathname === "/premium" ? "/premium" : pathname === "/3d" ? "/3d" : "/"}
+                  value={pathname === "/3d" ? "/3d" : "/"}
                   onChange={handleVersionChange}
                   className="appearance-none outline-none cursor-pointer pl-4 pr-10 py-2 rounded-full text-sm font-medium transition-all bg-zinc-900 text-zinc-300 border border-zinc-800 hover:border-zinc-600 focus:border-white"
                 >
                   <option value="/">Classic Version</option>
-                  <option value="/premium">Premium Version</option>
                   <option value="/3d">3D Version</option>
                 </select>
                 <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -176,12 +175,11 @@ export default function Navbar() {
                 >
                   <div className="relative">
                     <select
-                      value={pathname === "/premium" ? "/premium" : pathname === "/3d" ? "/3d" : "/"}
+                      value={pathname === "/3d" ? "/3d" : "/"}
                       onChange={handleVersionChange}
                       className="appearance-none outline-none cursor-pointer pl-6 pr-12 py-3 rounded-full text-base font-medium bg-zinc-900 text-zinc-300 border border-zinc-800 focus:border-white"
                     >
                       <option value="/">Classic Version</option>
-                      <option value="/premium">Premium Version</option>
                       <option value="/3d">3D Version</option>
                     </select>
                     <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none">
