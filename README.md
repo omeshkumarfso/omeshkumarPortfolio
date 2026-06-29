@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://omeshkumar.dev">🌐 Live Site</a> ·
+  <a href="https://omeshkumar.vercel.app">🌐 Live Site</a> ·
   <a href="https://www.linkedin.com/in/iamomeshkumarr/">💼 LinkedIn</a> ·
   <a href="https://github.com/omeshkumarfso">🐙 GitHub</a>
 </p>
@@ -172,7 +172,7 @@ The portfolio uses a cohesive design language:
 - **Phone** — [+91 9634409101](tel:+919634409101)
 - **LinkedIn** — [iamomeshkumarr](https://www.linkedin.com/in/iamomeshkumarr/)
 - **GitHub** — [omeshkumarfso](https://github.com/omeshkumarfso)
-- **Website** — [omeshkumar.dev](https://omeshkumar.vercel.app/)
+- **Website** — [https://omeshkumar.vercel.app](https://omeshkumar.vercel.app/)
 
 ---
 
