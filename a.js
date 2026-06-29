@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // --- Configuration ---
-const EXCLUDE_FOLDERS = ['node_modules','.git','.next'];
+const EXCLUDE_FOLDERS = ['node_modules','.git','.next',".agents"];
 const EXCLUDE_FILES = ['.env','a.js','package-lock.json'];
 const OUTPUT_FILE_NAME = 'all_project_contents.txt'; // Name of the output text file
 

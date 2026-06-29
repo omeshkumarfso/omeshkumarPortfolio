@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://omeshkumar.dev"),
+  metadataBase: new URL("https://omeshkumar.vercel.app"),
   title: {
     default: "Omesh Kumar | Fullstack Developer & AI Integration Specialist",
     template: "%s | Omesh Kumar Portfolio",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "Portfolio",
     "Web Developer India",
   ],
-  authors: [{ name: "Omesh Kumar", url: "https://omeshkumar.dev" }],
+  authors: [{ name: "Omesh Kumar", url: "https://omeshkumar.vercel.app" }],
   creator: "Omesh Kumar",
   publisher: "Omesh Kumar",
   robots: {
@@ -49,12 +49,12 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://omeshkumar.dev",
+    canonical: "https://omeshkumar.vercel.app",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://omeshkumar.dev",
+    url: "https://omeshkumar.vercel.app",
     title: "Omesh Kumar | Fullstack Developer & AI Integration Specialist",
     description:
       "Portfolio showcasing 5+ years of experience building scalable web applications, AI-powered solutions, and leading development teams.",
@@ -82,7 +82,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Omesh Kumar",
-  url: "https://omeshkumar.dev",
+  url: "https://omeshkumar.vercel.app",
   jobTitle: "Fullstack Developer & AI Integration Specialist",
   sameAs: [
     "https://www.linkedin.com/in/iamomeshkumarr/",
