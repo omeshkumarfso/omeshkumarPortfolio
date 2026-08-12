@@ -108,7 +108,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-slate-300 mb-6 font-medium"
           >
-            Founder of Kodikas · Fullstack Developer & AI Integration Specialist
+            Freelancer · Fullstack Developer & AI Integration Specialist
           </motion.p>
 
           <motion.p

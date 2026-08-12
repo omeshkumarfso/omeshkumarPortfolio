@@ -2,7 +2,7 @@
   "personalInfo": {
     "name": "Omesh Kumar",
     "title": "Fullstack Developer & AI Integration Specialist",
-    "founderTitle": "Founder of Kodikas",
+    "founderTitle": "Freelancer",
     "shortDescription": "Crafting innovative digital solutions with 5+ years of expertise in React.js, Node.js, and AI integration. Passionate about building scalable platforms that drive business growth and enhance user experiences.",
     "availability": "Available for new opportunities",
     "email": "omeshkumarfso@gmail.com",
@@ -114,7 +114,7 @@
   "experience": [
     {
       "company": "Kodikas",
-      "position": "Founder & Full-Stack Developer",
+      "position": "Freelancer & Full-Stack Developer",
       "duration": "2026 – Present",
       "location": "Remote · India",
       "color": "from-emerald-500 to-teal-500",

@@ -99,7 +99,7 @@ export default function Navbar() {
               onClick={() => scrollToSection("top")}
             >
               <span className="text-xl font-bold tracking-tight text-white">
-                OK.
+                  OMESH KUMAR
               </span>
             </div>
 

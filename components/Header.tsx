@@ -71,7 +71,7 @@ export default function Header() {
                   : "bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"
               }`}
             >
-              OK.
+              OMESH KUMAR
             </span>
           </div>
 

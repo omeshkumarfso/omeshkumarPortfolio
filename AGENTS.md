@@ -32,7 +32,7 @@ CI/CD, Git/GitHub/GitLab, Swagger, Postman, JIRA, Agile
 2. **Celebal Technology Pvt. Ltd.** — Jul 2021 – Aug 2022 | Associate Software Developer
 3. **Softworld (India) Pvt. Ltd.** — Aug 2022 – May 2023 | React Developer → Team Lead
 4. **FiftyFiveTechnologies Pvt. Ltd.** — Nov 2023 – Sep 2025 | Software Developer
-5. **Kodikas** — 2026 – Present | Founder & Full-Stack Developer
+5. **Kodikas** — 2026 – Present | Freelancer & Full-Stack Developer
 
 ## Projects to Feature (with real metrics)
 
@@ -95,7 +95,7 @@ Stack: React, React Native, Redux, Razorpay
 
 ## Portfolio Sections to Build (in order)
 1. **Hero** — Full name, role title, short tagline, floating 3D element, CTA buttons (View Work / Contact)
-2. **About** — Summary text, ~5yr experience, founder of Kodikas, open to remote/relocation
+2. **About** — Summary text, ~5yr experience, freelancer, open to remote/relocation
 3. **Experience** — Vertical 3D timeline with 5 companies and date ranges
 4. **Projects** — 8 project cards with metrics, tech stack badges, hover 3D effect
 5. **Tech Stack** — Floating 3D icons grouped by Frontend / Backend / Cloud

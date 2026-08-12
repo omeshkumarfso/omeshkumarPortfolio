@@ -11,7 +11,7 @@ import About from "@/components/sections/About"
 import TechStack from "@/components/sections/TechStack"
 export const metadata: Metadata = {
   title: `${portfolioData.personalInfo.name} | 3D Portfolio`,
-  description: "Full-Stack Developer · Founder of Kodikas. A 3D interactive portfolio experience.",
+  description: "Full-Stack Developer · Freelancer of Kodikas. A 3D interactive portfolio experience.",
 }
 
 export default function ThreeDPortfolio() {

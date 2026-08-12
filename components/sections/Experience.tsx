@@ -133,9 +133,9 @@ export default function Experience() {
                       </div>
                       
                       <div className="text-zinc-400 leading-relaxed text-sm lg:text-base space-y-2">
-                        <ul className="list-disc list-inside space-y-2 marker:text-zinc-600">
+                        <ul className="list-disc list-outside pl-5 space-y-3 marker:text-zinc-600">
                           {job.achievements.map((achievement, i) => (
-                            <li key={i}>{achievement}</li>
+                            <li key={i} className="pl-1 leading-relaxed">{achievement}</li>
                           ))}
                         </ul>
                       </div>

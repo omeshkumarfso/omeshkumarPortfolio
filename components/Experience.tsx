@@ -7,7 +7,7 @@ export default function Experience() {
   const experiences = [
     {
       company: "Kodikas",
-      position: "Founder & Full-Stack Developer",
+      position: "Freelancer & Full-Stack Developer",
       duration: "2026 – Present",
       location: "Remote · India",
       color: "from-emerald-500 to-teal-500",

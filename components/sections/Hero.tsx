@@ -77,7 +77,7 @@ export default function Hero() {
         </h2>
         
         <p className="text-zinc-500 max-w-2xl text-base md:text-lg mb-12">
-          ~5 years &middot; Founder of Kodikas &middot; Open to remote roles globally
+          ~5 years &middot; Freelancer &middot; Open to remote roles globally
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
