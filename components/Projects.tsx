@@ -194,14 +194,7 @@ export default function Projects() {
                       alt={project.title}
                       className="w-full h-80 object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <button
-                        className={`flex items-center px-4 py-2 rounded-md font-medium bg-gradient-to-r ${project.color} hover:scale-110 text-white shadow-lg transform transition-all duration-300`}
-                      >
-                        <Play className="mr-2 h-5 w-5" />
-                        View Demo
-                      </button>
-                    </div>
+
                     <div className="absolute top-4 right-4">
                       <div className={`p-2 bg-gradient-to-r ${project.color} rounded-full`}>
                         <Star className="h-5 w-5 text-white" />
